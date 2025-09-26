@@ -1,0 +1,29 @@
+{
+  "name": "dynamic-webscraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenTechWizard/dynamic-webscraper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenTechWizard/dynamic-webscraper/issues"
+  },
+  "homepage": "https://github.com/BenTechWizard/dynamic-webscraper#readme",
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "playwright": "^1.55.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.2"
+  }
+}
