@@ -32,6 +32,7 @@ async function scrape() {
         const page = await openPage(browser.data, url);
         if(!page.status || !page.data){
             console.log('Error opening page:', page.error);
+            await closeBrowser(browser.data);
             return;
         }
 
@@ -40,6 +41,7 @@ async function scrape() {
             const element = await getElement(page.data, action.selector);
             if(!element.status || !element.data){
                 console.log('Error getting element:', element.error);
+                await closeBrowser(browser.data);
                 return;
             }
 
@@ -55,11 +57,13 @@ async function scrape() {
 
             } else {
                 console.log('Invalid action:', action.action);
+                await closeBrowser(browser.data);
                 return;
             }
 
             if(!actionResult.status || !actionResult.data){
                 console.log('Error performing action:', actionResult.error);
+                await closeBrowser(browser.data);
                 return;
             }
 
@@ -70,12 +74,14 @@ async function scrape() {
             const element = await getElement(page.data, collection.selector);
             if(!element.status || !element.data){
                 console.log('Error getting element:', element.error);
+                await closeBrowser(browser.data);
                 return;
             }
 
             const attributeValue = await getAttribute(element.data, collection.attribute);
             if(!attributeValue.status || !attributeValue.data){
                 console.log('Error getting attribute value:', attributeValue.error);
+                await closeBrowser(browser.data);
                 return;
             }
             
