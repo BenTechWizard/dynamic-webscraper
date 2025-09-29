@@ -95,11 +95,7 @@ async function scrape() {
             return;
         }
 
-        console.log(`
-            Data Scraped:
-
-            ${JSON.stringify(data, null, 2)}
-        `);
+        console.log("Data Scraped:\n", JSON.stringify(data, null, 2));
 
     } catch (error){
         console.log('Error scraping:', error);
