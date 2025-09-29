@@ -7,6 +7,21 @@ export interface returnObject <T>{
     message?: string;
 }
 
+export interface preScrapeAction {
+    selector: string;
+    action: string;
+    value: string;
+}
+
+export interface collection {
+    name: string;
+    selector: string;
+    attribute: string;
+}
+
 export interface configObject {
     url: string;
+    headless: boolean;
+    preScrapeActions: preScrapeAction[];
+    collections: collection[];
 }

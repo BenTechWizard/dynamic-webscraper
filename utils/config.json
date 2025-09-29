@@ -1,3 +1,23 @@
 {
-    "url": "https://www.google.com"
+    "url": "https://www.google.com",
+    "headless": false,
+    "preScrapeActions": [
+        {
+            "selector": "#L2AGLb",
+            "action": "click",
+            "value": ""
+        }
+    ],
+    "collections": [
+        {
+            "name": "button1Text",
+            "selector": ".FPdoLc.lJ9FBc>center>[type=\"submit\"]:nth-child(1)",
+            "attribute": "aria-label"
+        },
+        {
+            "name": "button2Text",
+            "selector": ".FPdoLc.lJ9FBc>center>[type=\"submit\"]:nth-child(2)",
+            "attribute": "aria-label"
+        }
+    ]
 }
